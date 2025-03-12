@@ -1,4 +1,5 @@
 from data_cleaning import load_and_clean_data
+import visualization as viz
 
 # Define the file path
 file_path = "Lung Cancer Dataset.csv"
@@ -10,4 +11,8 @@ cleaned_df = load_and_clean_data(file_path)
 print(cleaned_df.info())
 print(cleaned_df.head())
 
-# Proceed with visualization or further analysis
+# Call visualization functions
+viz.plot_age_distribution(cleaned_df)
+viz.plot_gender_distribution(cleaned_df)
+viz.plot_smoking_vs_disease(cleaned_df)
+viz.plot_energy_vs_disease(cleaned_df)
